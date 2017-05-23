@@ -13,7 +13,7 @@
                 <div id="" class="hpdiv lifePencherL"> <!-- Barre de vie n°1 -->
                     <div id="inHpL" class="inHp heightmax"></div> <!-- Barre verte -->
                     <div class="fx jsContentSB"> <!-- Nom et mana -->
-                        <p class="policeName marginone scaleX">POMME</p>
+                        <p id="namePlayerL" class="policeName marginone scaleX">POMME</p>
                         <div class="manaDiv scaleX">
                             <div id="manaLeft" class="heightmax widthmin"></div>
                         </div>
@@ -22,7 +22,7 @@
                 <div id="" class="hpdiv lifePencherR"> <!-- Barre de vie n°2 -->
                     <div id ="inHpR" class="inHp heightmax"></div> <!-- Barre verte -->
                     <div class="fx jsContentSB"> <!-- Nom et mana -->
-                        <p class="policeName marginone">POIRE</p>
+                        <p id="namePlayerR" class="policeName marginone">POIRE</p>
                         <div class="manaDiv scaleX">
                             <div id="manaRight" class="heightmax widthmin"></div>
                         </div>
@@ -55,8 +55,9 @@
         perso2.power = 17;
         perso2.armure = 3;
         perso2.mana = 0;
+        perso2.name = "Claudia";
         perso2.chemin = playerTwo;
-        perso2.stop = "ninjaboy";
+        perso2.stop = "ninjaboy"; // class
         perso2.attack = "ninjaboyattack";
         perso2.run = "ninjaboyrun";
 
@@ -71,8 +72,9 @@
         perso4.power = 10;
         perso4.armure = 8;
         perso4.mana = 0;
+        perso4.name = "Titania";
         perso4.chemin = playerOne;
-        perso4.stop = "ninjagirl";
+        perso4.stop = "ninjagirl"; // class
         perso4.attack = "ninjagirlattack";
         perso4.run = "ninjagirlrun";
 
@@ -87,6 +89,9 @@
 
         playerOne.classList = joueur1.stop;
         playerTwo.classList = joueur2.stop + " scaleX";
+                
+        document.querySelector("#namePlayerL").textContent = joueur1.name;
+        document.querySelector("#namePlayerR").textContent = joueur2.name;
 
         function coufaible(attacker, victim){
             let damageLife = attacker.power - victim.armure;
