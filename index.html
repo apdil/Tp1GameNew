@@ -8,7 +8,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="marginAuto">
-    <main class="widthmax heightmax fx fxColumn jsContentSA">
+    <main class="widthmax heightmax fx fxColumn jsContentSB">
+        <div id="divChampsPerso" class="fx jsContentSB"> <!-- champs Present Perosnnage -->
+            <div class="champsDiv scaleX fx"> <!-- presente perso Left -->
+                <div id="imgPersoL"></div>
+                <div id="caracterL" class="scaleX"></div>
+            </div>
+            <div class="champsDiv fx"> <!-- presente perso Right -->
+                <div id="imgPersoR"></div>
+                <div id="caracterR"></div>
+            </div>
+        </div>
         <div class="fx widthmax jsContentSA"> <!-- Barre de vie HP x2 -->
                 <div id="" class="hpdiv lifePencherL"> <!-- Barre de vie n°1 -->
                     <div id="inHpL" class="inHp heightmax"></div> <!-- Barre verte -->
@@ -93,6 +103,7 @@
         document.querySelector("#namePlayerL").textContent = joueur1.name;
         document.querySelector("#namePlayerR").textContent = joueur2.name;
 
+
         function coufaible(attacker, victim){
             let damageLife = attacker.power - victim.armure;
             victim.life -= damageLife;
@@ -146,7 +157,6 @@
 
         document.addEventListener("keydown", function(e){
             let entre = e.keyCode;
-            
             //console.log("left : " + document.getElementById("playerOne").offsetLeft + "  right : " + document.getElementById("playerOne").offsetTop);
 
             switch(entre){
@@ -228,6 +238,11 @@
                         return null;
                     break;
                 }
+                
+                document.querySelector("#caracterL").textContent = "Life : " + joueur1.life;
+                document.querySelector("#caracterR").textContent = "Life : " + joueur2.life;
+                document.querySelector("#caracterL").textContent += "Life : " + joueur1.life;
+                document.querySelector("#caracterR").textContent += "Life : " + joueur2.life;
             
             console.log(player1Moove);
             console.log(player2Moove);

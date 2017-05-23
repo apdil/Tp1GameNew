@@ -133,7 +133,37 @@ main{
     height:8em;
     width:5em;
 }
-
+#divChampsPerso{
+    margin-top: 1em;
+    margin-bottom: -17em;
+}
+.champsDiv{
+    height:4.5em;
+    width:30%;
+    background-color: whitesmoke;
+    margin-top: 1;
+    border: 2px solid black;
+    border-right: none;
+    border-bottom-left-radius: 7%;
+    border-top-left-radius: 7%;
+    overflow: hidden;
+}
+#champlayer{
+    flex-direction: column-reverse;
+    margin-bottom: 1em;
+}
+#imgPersoL{
+    background-image: url(img/ninjag/throw3.png);
+    height: 5em;
+    width: 5em;
+    background-size: 100% 100%;
+}
+#imgPersoR{
+    background-image: url(img/ninjab/throw2.png);
+    height: 5em;
+    width: 5em;
+    background-size: 100% 100%;
+}
 
 @keyframes ninjaGirlStop{
     0%{
@@ -181,7 +211,6 @@ main{
     0%{
         background-image: url(img/ninjag/run0.png);
         background-size: 5em 8em;
-        margin-top: -0.3em;
     }
     20%{
         background-image: url(img/ninjag/run1.png);
@@ -210,14 +239,12 @@ main{
     100%{
         background-image: url(img/ninjag/run9.png);
         background-size: 5em 8em;
-        margin-top: -0.3em;
     }
 }
 @keyframes ninjagirllattack{
     0%{
         background-image: url(img/ninjag/attack1.png);
         background-size: 7em 8em;
-        margin-top: -0.3em;
     }
     20%{
         background-image: url(img/ninjag/attack2.png);
@@ -246,7 +273,6 @@ main{
     100%{
         background-image: url(img/ninjag/attack10.png);
         background-size: 7em 8em;
-        margin-top: -0.3em;
     }
 }
 @keyframes ninjaBoyStop{
@@ -295,7 +321,6 @@ main{
     0%{
         background-image: url(img/ninjab/attack1.png);
         background-size: 8em 8em;
-        margin-top: -0.3em;
     }
     20%{
         background-image: url(img/ninjab/attack2.png);
@@ -324,14 +349,12 @@ main{
     100%{
         background-image: url(img/ninjab/attack10.png);
         background-size: 8em 8em;
-        margin-top: -0.3em;
     }
 }
 @keyframes ninjaboyrun{
     0%{
         background-image: url(img/ninjab/run0.png);
         background-size: 6em 8em;
-        margin-top: -0.3em;
         width: 6em;
     }
     20%{
@@ -361,7 +384,6 @@ main{
     100%{
         background-image: url(img/ninjab/run9.png);
         background-size: 6em 8em;
-        margin-top: -0.3em;
         width: 6em;
     }
 }
