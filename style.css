@@ -8,6 +8,7 @@ main{
     background-image: url(img/fond.gif);
     background-size: 100% 100%;
 }
+
 .fx{
     display: flex;
 }
@@ -174,7 +175,8 @@ main{
 }
 .caractPolice{
     width: 50%;
-    font-size: 1.5em;
+    font-size: 1.2em;
+    text-shadow: 2px 2px azure;
 }
 @keyframes ninjaGirlStop{
     0%{

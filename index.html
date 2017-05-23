@@ -144,10 +144,10 @@
             }
         }
         function manaMoove(id, playerlife){ 
-            if(playerlife.mana < 0){
+            if(playerlife.mana <= 0){
                 document.querySelector(id).style.width = 0 + "%";
                 playerlife.mana = 0;
-            } else if(playerlife.mana > 100){
+            } else if(playerlife.mana >= 100){
                 document.querySelector(id).style.width = 100 + "%";
                 playerlife.mana = 100;
             }
@@ -210,11 +210,13 @@
                     potion(joueur1);
                     hpMoove("#inHpL", joueur1);
                     manaMoove("#manaLeft", joueur1);
+                    textIn("#caractManaL", "Mana : ", joueur1.mana);
                 break;
                 case 80 : // p potion player2
                     potion(joueur2);
                     hpMoove("#inHpR", joueur2);
                     manaMoove("#manaRight", joueur2);
+                    textIn("#caractManaR", "Mana : ", joueur2.mana);
                 break;
                 case 65 : // only animation attack player 1
                     if(joueur1.stop !== playerOne.className){ // condition pour profile du player lors de l'attaque
@@ -258,8 +260,8 @@
                 textIn("#caractManaR", "Mana : ", joueur2.mana);
                 textIn("#caractPowerL", "Power : ", joueur1.power);
                 textIn("#caractPowerR", "Power : ", joueur2.power);
-                textIn("#caractArmureL", "Armure : ", joueur1.armure);
-                textIn("#caractArmureR", "Armure : ", joueur2.armure);
+                textIn("#caractArmureL", "Armor : ", joueur1.armure);
+                textIn("#caractArmureR", "Armor : ", joueur2.armure);
             
             console.log(player1Moove);
             console.log(player2Moove);
