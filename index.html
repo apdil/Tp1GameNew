@@ -12,11 +12,21 @@
         <div id="divChampsPerso" class="fx jsContentSB"> <!-- champs Present Perosnnage -->
             <div class="champsDiv scaleX fx"> <!-- presente perso Left -->
                 <div id="imgPersoL"></div>
-                <div id="caracterL" class="scaleX"></div>
+                <div class="scaleX fx fxWrap widthmax"> <!-- div caracteristique -->
+                    <div id="caractLifeL" class="caractPolice fx jsContentC alItemsC"></div>
+                    <div id="caractManaL" class="caractPolice fx jsContentC alItemsC"></div>
+                    <div id="caractPowerL" class="caractPolice fx jsContentC alItemsC"></div>
+                    <div id="caractArmureL" class="caractPolice fx jsContentC alItemsC"></div>
+                </div>
             </div>
             <div class="champsDiv fx"> <!-- presente perso Right -->
                 <div id="imgPersoR"></div>
-                <div id="caracterR"></div>
+                <div class="fx fxWrap widthmax">
+                    <div id="caractLifeR" class="caractPolice fx jsContentC alItemsC"></div>
+                    <div id="caractManaR" class="caractPolice fx jsContentC alItemsC"></div>
+                    <div id="caractPowerR" class="caractPolice fx jsContentC alItemsC"></div>
+                    <div id="caractArmureR" class="caractPolice fx jsContentC alItemsC"></div>
+                </div>
             </div>
         </div>
         <div class="fx widthmax jsContentSA"> <!-- Barre de vie HP x2 -->
@@ -150,6 +160,10 @@
                 oldclass.classList = newclass;
             });
         }
+        function textIn(chemin, commentaire, keys){
+            document.querySelector(chemin).textContent = commentaire + keys;
+
+        }
 
 
             let player1Moove = 25; // indice pour marginleft placement joueur
@@ -238,11 +252,14 @@
                         return null;
                     break;
                 }
-                
-                document.querySelector("#caracterL").textContent = "Life : " + joueur1.life;
-                document.querySelector("#caracterR").textContent = "Life : " + joueur2.life;
-                document.querySelector("#caracterL").textContent += "Life : " + joueur1.life;
-                document.querySelector("#caracterR").textContent += "Life : " + joueur2.life;
+                textIn("#caractLifeL", "Life : ", joueur1.life);
+                textIn("#caractLifeR", "Life : ", joueur2.life);
+                textIn("#caractManaL", "Mana : ", joueur1.mana);
+                textIn("#caractManaR", "Mana : ", joueur2.mana);
+                textIn("#caractPowerL", "Power : ", joueur1.power);
+                textIn("#caractPowerR", "Power : ", joueur2.power);
+                textIn("#caractArmureL", "Armure : ", joueur1.armure);
+                textIn("#caractArmureR", "Armure : ", joueur2.armure);
             
             console.log(player1Moove);
             console.log(player2Moove);

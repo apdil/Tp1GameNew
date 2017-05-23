@@ -20,6 +20,15 @@ main{
 .jsContentSB{
     justify-content: space-between;
 }
+.jsContentC{
+    justify-content: center;
+}
+.alItemsC{
+    align-items: center;
+}
+.fxWrap{
+    flex-wrap: wrap;
+}
 .widthmax{
     width:100%;
 }
@@ -140,13 +149,12 @@ main{
 .champsDiv{
     height:4.5em;
     width:30%;
-    background-color: whitesmoke;
+    /*background-color: whitesmoke;*/
     margin-top: 1;
-    border: 2px solid black;
+    /*border: 2px solid black;*/
     border-right: none;
     border-bottom-left-radius: 7%;
     border-top-left-radius: 7%;
-    overflow: hidden;
 }
 #champlayer{
     flex-direction: column-reverse;
@@ -155,16 +163,19 @@ main{
 #imgPersoL{
     background-image: url(img/ninjag/throw3.png);
     height: 5em;
-    width: 5em;
+    width: 25%;
     background-size: 100% 100%;
 }
 #imgPersoR{
     background-image: url(img/ninjab/throw2.png);
     height: 5em;
-    width: 5em;
+    width: 25%;
     background-size: 100% 100%;
 }
-
+.caractPolice{
+    width: 50%;
+    font-size: 1.5em;
+}
 @keyframes ninjaGirlStop{
     0%{
         background-image: url(img/ninjag/stop1.png);
