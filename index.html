@@ -8,10 +8,24 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="marginAuto">
-    <main class="widthmax heightmax fx fxColumn jsContentSB">
+    <main id="menu" class="widthmax heightmax">
+        <div>boutton back</div>
+        <h2 class="marginone">Choose your perso</h2>
+        <div class="fx fxWrap jsContentSB"> <!-- champs personnages -->
+            <div class="menuPerso"></div>
+            <div class="menuPerso"></div>
+            <div class="menuPerso"></div>
+            <div class="menuPerso"></div>
+            <div class="menuPerso"></div>
+            <div class="menuPerso"></div>
+            <div class="menuPerso"></div>
+            <div class="menuPerso"></div>
+        </div>
+    </main>
+    <main id="play" class="widthmax heightmax fx fxColumn jsContentSB">
         <div id="divChampsPerso" class="fx jsContentSB"> <!-- champs Present Perosnnage -->
             <div class="champsDiv scaleX fx"> <!-- presente perso Left -->
-                <div id="imgPersoL"></div>
+                <div id="imgPersoL" class="imgPerso"></div>
                 <div class="scaleX fx fxWrap widthmax"> <!-- div caracteristique -->
                     <div id="caractLifeL" class="caractPolice fx jsContentC alItemsC"></div>
                     <div id="caractManaL" class="caractPolice fx jsContentC alItemsC"></div>
@@ -20,7 +34,7 @@
                 </div>
             </div>
             <div class="champsDiv fx"> <!-- presente perso Right -->
-                <div id="imgPersoR"></div>
+                <div id="imgPersoR" class="imgPerso"></div>
                 <div class="fx fxWrap widthmax">
                     <div id="caractLifeR" class="caractPolice fx jsContentC alItemsC"></div>
                     <div id="caractManaR" class="caractPolice fx jsContentC alItemsC"></div>
@@ -55,6 +69,7 @@
         </div>
     </main>
     <script src="racine.js" type="text/javascript"></script>
+    <script src="menu.js" type="text/javascript"></script>
     <script src="play.js" type="text/javascript"></script>
 </body>
 </html>

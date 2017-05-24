@@ -8,7 +8,12 @@ main{
     background-image: url(img/fond.gif);
     background-size: 100% 100%;
 }
-
+#menu{
+    
+}
+#play{
+    display:none;
+}
 .fx{
     display: flex;
 }
@@ -161,14 +166,13 @@ main{
     flex-direction: column-reverse;
     margin-bottom: 1em;
 }
-#imgPersoL{
+.imgNinjaG{
     background-image: url(img/ninjag/throw3.png);
-    height: 5em;
-    width: 25%;
-    background-size: 100% 100%;
 }
-#imgPersoR{
-    background-image: url(img/ninjab/throw2.png);
+.imgNinjaB{
+    background-image: url(img/ninjab/throw2.png);  
+}
+.imgPerso{
     height: 5em;
     width: 25%;
     background-size: 100% 100%;
@@ -177,6 +181,11 @@ main{
     width: 50%;
     font-size: 1.2em;
     text-shadow: 2px 2px azure;
+}
+.menuPerso{
+    height:6em;
+    width:6em;
+    background-color: red;
 }
 @keyframes ninjaGirlStop{
     0%{

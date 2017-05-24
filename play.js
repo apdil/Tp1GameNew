@@ -108,8 +108,7 @@
             textIn("#caractPowerR", "Power : ", joueur2.power);
             textIn("#caractArmureL", "Armor : ", joueur1.armure);
             textIn("#caractArmureR", "Armor : ", joueur2.armure);
-            console.log(player1Moove);
-            console.log(player2Moove);
+
             }
         });
         

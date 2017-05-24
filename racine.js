@@ -15,11 +15,12 @@
         perso2.power = 17;
         perso2.armure = 3;
         perso2.mana = 0;
-        perso2.name = "Claudia";
+        perso2.name = "Titan";
         perso2.chemin = playerTwo;
         perso2.stop = "ninjaboy"; // class
         perso2.attack = "ninjaboyattack";
         perso2.run = "ninjaboyrun";
+        perso2.img = "imgNinjaB";
 
         let perso3 = new Object();
         perso3.life = 100;
@@ -37,6 +38,7 @@
         perso4.stop = "ninjagirl"; // class
         perso4.attack = "ninjagirlattack";
         perso4.run = "ninjagirlrun";
+        perso4.img = "imgNinjaG";
 
         data.push(perso1); // data[0]
         data.push(perso2); // data[1]
@@ -47,12 +49,14 @@
         joueur1 = data[3];
         joueur2 = data[1];
 
-        playerOne.classList = joueur1.stop;
-        playerTwo.classList = joueur2.stop + " scaleX";
+        playerOne.classList = joueur1.stop; // play.js
+        playerTwo.classList = joueur2.stop + " scaleX"; // play.js
                 
         document.querySelector("#namePlayerL").textContent = joueur1.name;// play.js
         document.querySelector("#namePlayerR").textContent = joueur2.name;// play.js
 
+        document.querySelector("#imgPersoL").classList += " " + joueur1.img;// img caract perso plays.js
+        document.querySelector("#imgPersoR").classList += " " + joueur2.img;// img caract perso plays.js
 
         function coufaible(attacker, victim){
             let damageLife = attacker.power - victim.armure;
