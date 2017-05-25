@@ -1,6 +1,5 @@
 body{
     height:34em;
-    width:75%;
     margin-top: 2em;
     background-color: black;
 }
@@ -49,6 +48,15 @@ main{
 }
 .marginone{
     margin:0;
+}
+.marginTop3{
+    margin-top: 3em;
+}
+.marginTop1{
+    margin-top:1em;
+}
+.width75{
+    width: 75%;
 }
 .hpdiv{
     height:1.7em;
@@ -186,6 +194,12 @@ main{
     height:6em;
     width:6em;
     background-color: red;
+}
+#choosePlayer1{
+    height:6em;
+    width:6em;
+    position: absolute;
+    border: 1px solid blue;
 }
 @keyframes ninjaGirlStop{
     0%{
