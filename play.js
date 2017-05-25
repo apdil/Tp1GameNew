@@ -1,15 +1,76 @@
+
+        function coufaible(attacker, victim){
+            let damageLife = attacker.power - victim.armure;
+            victim.life -= damageLife;
+            attacker.mana += attacker.power;
+        }
+        function potion(perso){
+            if(perso.life === 100 && perso.power > perso.mana){
+                let reste = 100 - perso.life;
+                return perso.mana - perso.life;
+            }
+            if(perso.mana !== 0){ // augmenter life
+                perso.life += perso.power;
+            }
+            if(perso.life <= 100 && perso.mana !== 0){ // diminuer mana
+                perso.mana -= perso.power;
+            }
+        }
+        function hpMoove(id, playerlife){ 
+            if(playerlife.life < 0){
+                document.querySelector(id).style.width = 0 + "%";
+                playerlife.life = 0;
+            } else if(playerlife.life > 100){
+                document.querySelector(id).style.width = 100 + "%";
+                playerlife.life = 100;
+            }
+            else{
+                document.querySelector(id).style.width = playerlife.life + "%";
+            }
+        }
+        function manaMoove(id, playerlife){ 
+            if(playerlife.mana <= 0){
+                document.querySelector(id).style.width = 0 + "%";
+                playerlife.mana = 0;
+            } else if(playerlife.mana >= 100){
+                document.querySelector(id).style.width = 100 + "%";
+                playerlife.mana = 100;
+            }
+            else{
+                document.querySelector(id).style.width = playerlife.mana + "%";
+            }
+        }
+        function animend(cheminClass, oldclass, newclass) {
+            document.body.querySelector(cheminClass).addEventListener("animationend", function(){
+                oldclass.classList = newclass;
+            });
+        }
+        function textIn(chemin, commentaire, keys){
+            document.querySelector(chemin).textContent = commentaire + keys;
+
+        }
+  
+
+        playerOne.classList = joueur1.stop; // animation arret
+        playerTwo.classList = joueur2.stop + " scaleX"; // animation arret
+
+        document.querySelector("#namePlayerL").textContent = joueur1.name;// nom player
+        document.querySelector("#namePlayerR").textContent = joueur2.name;// nom player
+
+        document.querySelector("#imgPersoL").classList += " " + joueur1.img;// img caract perso 
+        document.querySelector("#imgPersoR").classList += " " + joueur2.img;// img caract perso
+
+        textIn("#caractLifeL", "Life : ", joueur1.life);
+        textIn("#caractLifeR", "Life : ", joueur2.life);
+        textIn("#caractManaL", "Mana : ", joueur1.mana);
+        textIn("#caractManaR", "Mana : ", joueur2.mana);
+        textIn("#caractPowerL", "Power : ", joueur1.power);
+        textIn("#caractPowerR", "Power : ", joueur2.power);
+        textIn("#caractArmureL", "Armor : ", joueur1.armure);
+        textIn("#caractArmureR", "Armor : ", joueur2.armure);
             
-            textIn("#caractLifeL", "Life : ", joueur1.life);
-            textIn("#caractLifeR", "Life : ", joueur2.life);
-            textIn("#caractManaL", "Mana : ", joueur1.mana);
-            textIn("#caractManaR", "Mana : ", joueur2.mana);
-            textIn("#caractPowerL", "Power : ", joueur1.power);
-            textIn("#caractPowerR", "Power : ", joueur2.power);
-            textIn("#caractArmureL", "Armor : ", joueur1.armure);
-            textIn("#caractArmureR", "Armor : ", joueur2.armure);
-            
-            let player1Moove = 25; // indice pour marginleft placement joueur
-            let player2Moove = 75;
+        let player1Moove = 25; // emplacement joueur
+        let player2Moove = 75;
 
         document.addEventListener("keydown", function(e){
             let entre = e.keyCode;

@@ -1,7 +1,4 @@
 
-console.log("left : " + document.getElementById("choix1").offsetLeft);
-console.log("top : " + document.getElementById("choix1").offsetTop);
-
 tabchoice = [];
 
 let place1 = new Object();
@@ -31,6 +28,10 @@ let place8 = new Object();
 
 tabchoice.push(place1, place2, place3, place4, place5, place6, place7, place8);
 choosePlayer1 = document.getElementById("choosePlayer1");
+choosePlayer2 = document.getElementById("choosePlayer2");
+
+        document.querySelector("#namePlayerL").textContent = joueur1.name;// nom player
+        document.querySelector("#namePlayerR").textContent = joueur2.name;// nom player
 
     function mooveSquare(player, nombre){
         player.style.left = tabchoice[nombre].left + "px";
@@ -38,48 +39,67 @@ choosePlayer1 = document.getElementById("choosePlayer1");
     }
 
 let i = 0;
-mooveSquare(choosePlayer1, i);
+let x = 0;
 
 document.addEventListener("keydown", function(e){
+
     let entre = e.keyCode;
     switch(entre){
         case 39 : // fleche droite
             if(i < 7){
                 i++;
-                mooveSquare(choosePlayer1, i);
-                console.log(i);
-            } else {
-                return null;
+                if(x === 0){
+                    mooveSquare(choosePlayer1, i);
+                } else{
+                    mooveSquare(choosePlayer2, i);
+                }
             }
-
         break;
         case 37 : // fleche gauche
             if(i > 0){
                 i--;
-                mooveSquare(choosePlayer1, i);
-                console.log(i);
-            } else {
-                return null;
+                if(x === 0){
+                    mooveSquare(choosePlayer1, i);
+                } else{
+                    mooveSquare(choosePlayer2, i);
+                }
             }
         break;
         case 40 : // bas
-            if(i <= 7){
-                i = i + 4;
+            i = i + 4;
             if(i > 7) {
                 i = i - 4;
             }
+            if(x === 0){
                 mooveSquare(choosePlayer1, i);
-                console.log(i);
+            } else{
+                mooveSquare(choosePlayer2, i);
             }
         break;
         case 38 : // haut
-            if(i <= 7){
-                i = i - 4;
+            i = i - 4;
             if(i < 0) {
                 i = i + 4;
             }
+            if(x === 0){
                 mooveSquare(choosePlayer1, i);
-                console.log(i);
+            } else{
+                mooveSquare(choosePlayer2, i);
+            }
+        break;
+        case 77 : // m
+            if(x === 0){
+                joueur1 = data[i];
+                joueur1.chemin = playerOne;
+                console.log(joueur1)
+                i = 0;
+                x++;
+            } else {
+                joueur2 = data[i];
+                joueur2.chemin = playerTwo;
+                console.log(joueur2)
+                i = 0;
+                x++;
             }
     }
 });

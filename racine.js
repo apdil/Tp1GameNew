@@ -9,6 +9,12 @@
         perso1.power = 20;
         perso1.armure = 1;
         perso1.mana = 0;
+        perso1.name = "Keyron";
+        perso1.chemin = "";
+        perso1.stop = ""; // class
+        perso1.attack = "";
+        perso1.run = "";
+        perso1.img = "";
 
         let perso2 = new Object();
         perso2.life = 100;
@@ -27,6 +33,12 @@
         perso3.power = 13;
         perso3.armure = 5;
         perso3.mana = 0;
+        perso3.name = "Momo";
+        perso3.chemin = "";
+        perso3.stop = ""; // class
+        perso3.attack = "";
+        perso3.run = "";
+        perso3.img = "";
 
         let perso4 = new Object();
         perso4.life = 100;
@@ -46,65 +58,6 @@
         data.push(perso4); // data[3]
 
 
-        joueur1 = data[3];
-        joueur2 = data[1];
-
-        playerOne.classList = joueur1.stop; // play.js
-        playerTwo.classList = joueur2.stop + " scaleX"; // play.js
-                
-        document.querySelector("#namePlayerL").textContent = joueur1.name;// play.js
-        document.querySelector("#namePlayerR").textContent = joueur2.name;// play.js
-
-        document.querySelector("#imgPersoL").classList += " " + joueur1.img;// img caract perso plays.js
-        document.querySelector("#imgPersoR").classList += " " + joueur2.img;// img caract perso plays.js
-
-        function coufaible(attacker, victim){
-            let damageLife = attacker.power - victim.armure;
-            victim.life -= damageLife;
-            attacker.mana += attacker.power;
-        }
-        function potion(perso){
-            if(perso.life === 100 && perso.power > perso.mana){
-                let reste = 100 - perso.life;
-                return perso.mana - perso.life;
-            }
-            if(perso.mana !== 0){ // augmenter life
-                perso.life += perso.power;
-            }
-            if(perso.life <= 100 && perso.mana !== 0){ // diminuer mana
-                perso.mana -= perso.power;
-            }
-        }
-        function hpMoove(id, playerlife){ 
-            if(playerlife.life < 0){
-                document.querySelector(id).style.width = 0 + "%";
-                playerlife.life = 0;
-            } else if(playerlife.life > 100){
-                document.querySelector(id).style.width = 100 + "%";
-                playerlife.life = 100;
-            }
-            else{
-                document.querySelector(id).style.width = playerlife.life + "%";
-            }
-        }
-        function manaMoove(id, playerlife){ 
-            if(playerlife.mana <= 0){
-                document.querySelector(id).style.width = 0 + "%";
-                playerlife.mana = 0;
-            } else if(playerlife.mana >= 100){
-                document.querySelector(id).style.width = 100 + "%";
-                playerlife.mana = 100;
-            }
-            else{
-                document.querySelector(id).style.width = playerlife.mana + "%";
-            }
-        }
-        function animend(cheminClass, oldclass, newclass) {
-            document.body.querySelector(cheminClass).addEventListener("animationend", function(){
-                oldclass.classList = newclass;
-            });
-        }
-        function textIn(chemin, commentaire, keys){
-            document.querySelector(chemin).textContent = commentaire + keys;
-
-        }
+        let joueur1 = 0;
+        let joueur2 = 0;
+            
