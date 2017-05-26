@@ -9,9 +9,9 @@ main{
 }
 #menu{
     
+    display: none;
 }
 #play{
-    display: none;
 }
 .fx{
     display: flex;
@@ -156,6 +156,50 @@ main{
     height:8em;
     width:5em;
 }
+.degue{
+    animation: degueStop 1s;
+    animation-timing-function: step-end;
+    animation-iteration-count: infinite;
+    height:8em;
+    width:5em;
+    background-image: url(img/boue.gif);
+}
+.degueattack{
+    animation: degueAttack 1s;
+    animation-timing-function: step-end;
+    height:8em;
+    width:5em;
+    background-image: url(img/boue.gif);
+}
+.deguerun{
+    animation: degueRun 1s;
+    animation-timing-function: step-end;
+    height:8em;
+    width:5em;
+    background-image: url(img/boue.gif);
+}
+.maxima{
+    animation: maximaStop 0.9s;
+    animation-timing-function: step-end;
+    animation-iteration-count: infinite;
+    height:8em;
+    width:5em;
+    background-image: url(img/maxima.png);
+}
+.maximattack{
+    animation: maximattack 1s;
+    animation-timing-function: step-end;
+    height:8em;
+    width:5em;
+    background-image: url(img/maxima.png);
+}
+.maximarun{
+    animation: maximaRun 0.7s;
+    animation-timing-function: step-end;
+    height:8em;
+    width:5em;
+    background-image: url(img/maxima.png);
+}
 #divChampsPerso{
     margin-top: 1em;
     margin-bottom: -17em;
@@ -176,14 +220,25 @@ main{
 }
 .imgNinjaG{
     background-image: url(img/ninjag/throw3.png);
+    background-size: 100% 100%;
 }
 .imgNinjaB{
-    background-image: url(img/ninjab/throw2.png);  
+    background-image: url(img/ninjab/throw2.png);
+    background-size: 100% 100%; 
+}
+.imgDegue{
+    background-image: url(img/boue.gif);
+    background-size: 1173% 787%;
+    background-position: 1% 88%;
+}
+.imgMaxima{
+    background-image: url(img/maxima.png);
+    background-size: 1747% 9000%;
+    background-position: 24.3% 96.9%;
 }
 .imgPerso{
     height: 5em;
     width: 25%;
-    background-size: 100% 100%;
 }
 .caractPolice{
     width: 50%;
@@ -194,24 +249,35 @@ main{
     height:6em;
     width:6em;
     border : 1px solid black;
+    background-color: wheat;
 }
 #choosePlayer1{
     height:6em;
     width:6em;
     position: absolute;
-    border: 2px solid yellow;
+    border: 4px solid yellow;
 }
 #choosePlayer2{
     height:6em;
     width:6em;
     position: absolute;
-    border: 2px solid blue;
+    border: 4px solid blue;
 }
-#choix2{
+#choix1 div{
+    background-image: url(img/boue.gif);
+    background-size: 978% 952%;
+    background-position: 0.3% 85%;
+}
+#choix2 div{
     background-image: url(img/ninjab/throw2.png);
-    background-size: 100% 150%;
+    background-size: 100% 137%;
 }
-#choix4{
+#choix3 div{
+    background-image: url(img/maxima.png);
+    background-size: 1500% 10000%;
+    background-position: 18% 1.15%;
+}
+#choix4 div{
     background-image: url(img/ninjag/throw3.png);
     background-size: 100% 150%;    
 }
@@ -435,5 +501,217 @@ main{
         background-image: url(img/ninjab/run9.png);
         background-size: 6em 8em;
         width: 6em;
+    }
+}
+
+@keyframes degueStop{
+    0%{
+        background-size: 1000% 700%;
+    }
+    14.3%{
+        background-position: 12% 0%;
+    }
+    28.6%{
+        background-position: 24% 0;
+    }
+    42.9%{
+        background-position: 35% 0;
+    }
+    57.2%{
+        background-position: 47% 0;
+    }
+    71.5%{
+        background-position: 58% 1%;
+    }
+    85.3%{
+        background-position: 69% 1%;
+    }
+    100%{
+        background-position: 84% 0;
+    }
+}
+@keyframes degueAttack{
+    0%{
+        background-size: 727% 932%;
+        background-position: 1% 53%;
+    }
+    12.5%{
+        background-size: 727% 723%;
+        background-position: 16.6% 51%;
+        margin-left: 5%;
+    }
+    25%{
+        background-size: 729% 723%;
+        background-position: 31% 51%;
+        margin-left: 10%;
+    }
+    37.5%{
+        background-size: 729% 723%;
+        background-position: 47% 51%;
+        margin-left: 10%;
+    }
+    50%{
+        background-size: 729% 723%;
+        background-position: 63.6% 52%;
+        margin-left: 10%;
+    }
+    62.5%{
+        background-size: 729% 723%;
+        background-position: 80.6% 52%;
+        margin-left: 10%;
+    }
+    75%{
+        background-size: 1100% 723%;
+        background-position: 92.6% 52%;
+    }
+    87.5%{
+        background-size: 1229% 723%;
+        background-position: 100.5% 52%;
+    }
+    100%{
+        background-size: 1229% 723%;
+        background-position: 100.5% 52%;
+    }
+}
+@keyframes degueRun{
+    0%{
+        background-size: 1069% 911%;
+        background-position: 0% 69.9%;
+    }
+    16.5%{
+        background-size: 1069% 911%;
+        background-position: 13% 69.9%;
+    }
+    33%{
+        background-size: 1069% 911%;
+        background-position: 26% 69.9%;
+    }
+    49.5%{
+        background-size: 1069% 911%;
+        background-position: 38% 69.9%;
+    }
+    66%{
+        background-size: 1069% 911%;
+        background-position: 51.5% 69.9%;
+    }
+    82.5%{
+        background-size: 1069% 911%;
+        background-position: 64.1% 69.9%;
+    }
+    100%{
+        background-size: 1100% 723%;
+        background-position: 92.6% 52%;
+    }
+}
+@keyframes maximaStop{
+    0%{
+        background-size: 1500% 10000%;
+        background-position: 1% 0.1%;
+    }
+    16.5%{
+        background-size: 1500% 10000%;
+        background-position: 10.2% 0.1%;
+    }
+    33%{
+        background-size: 1500% 10000%;
+        background-position: 19.7% 0.1%;
+    }
+    49.5%{
+        background-size: 1500% 10000%;
+        background-position: 29.7% 0.1%;
+    }
+    66%{
+        background-size: 1500% 10000%;
+        background-position: 39.7% 0.1%;
+    }
+    82.5%{
+        background-size: 1500% 10000%;
+        background-position: 49.4% 0.1%;
+    }
+    100%{
+        background-size: 1500% 10000%;
+        background-position: 49.4% 0.1%;
+    }
+}
+@keyframes maximattack{
+    0%{
+        background-size: 1200% 10000%;
+        background-position: 1% 30.55%;
+    }
+    11%{
+        background-size: 1200% 10000%;
+        background-position: 9% 30.55%;
+    }
+    22%{
+        background-size: 1200% 10000%;
+        background-position: 18% 30.55%;
+    }
+    33%{
+        background-size: 1200% 10000%;
+        background-position: 28.3% 30.55%;
+    }
+    44%{
+        background-size: 1200% 10000%;
+        background-position: 39.8% 30.55%;
+    }
+    55%{
+        background-size: 1200% 10000%;
+        background-position: 51.8% 30.55%;
+    }
+    66%{
+        background-size: 805% 10000%;
+        background-position: 66% 30.6%;
+        width: 9em;
+    }
+    77%{
+        background-size: 805% 10000%;
+        background-position: 84% 30.6%;
+    }
+    88%{
+        background-size: 805% 10000%;
+        background-position: 100% 30.6%;
+        width: 9em;
+    }
+    100%{
+        background-size: 1200% 10000%;
+        background-position: 1% 30.55%;
+    }
+}
+@keyframes maximaRun{
+    0%{
+        background-size: 1500% 10000%;
+        background-position: 1% 1.15%;
+    }
+    12.5%{
+        background-size: 1500% 10000%;
+        background-position: 10% 1.15%;
+    }
+    25%{
+        background-size: 1500% 10000%;
+        background-position: 18% 1.15%;
+    }
+    37.5%{
+        background-size: 1500% 10000%;
+        background-position: 25% 1.15%;
+    }
+    50%{
+        background-size: 1500% 10000%;
+        background-position: 33% 1.15%;
+    }
+    62.5%{
+        background-size: 1500% 10000%;
+        background-position: 41% 1.15%;
+    }
+    75%{
+        background-size: 1500% 10000%;
+        background-position: 48% 1.15%;
+    }
+    87.5%{
+        background-size: 1500% 10000%;
+        background-position: 56% 1.15%;
+    }
+    100%{
+        background-size: 1500% 10000%;
+        background-position: 56% 1.15%;
     }
 }

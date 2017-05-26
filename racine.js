@@ -9,12 +9,12 @@
         perso1.power = 20;
         perso1.armure = 1;
         perso1.mana = 0;
-        perso1.name = "Keyron";
-        perso1.chemin = "";
-        perso1.stop = ""; // class
-        perso1.attack = "";
-        perso1.run = "";
-        perso1.img = "";
+        perso1.name = "Degueeee";
+        perso1.chemin = playerOne;
+        perso1.stop = "degue"; // class
+        perso1.attack = "degueattack";
+        perso1.run = "deguerun";
+        perso1.img = "imgDegue";
 
         let perso2 = new Object();
         perso2.life = 100;
@@ -33,12 +33,12 @@
         perso3.power = 13;
         perso3.armure = 5;
         perso3.mana = 0;
-        perso3.name = "Momo";
-        perso3.chemin = "";
-        perso3.stop = ""; // class
-        perso3.attack = "";
-        perso3.run = "";
-        perso3.img = "";
+        perso3.name = "Maxima";
+        perso3.chemin = playerOne;
+        perso3.stop = "maxima"; // class
+        perso3.attack = "maximattack";
+        perso3.run = "maximarun";
+        perso3.img = "imgMaxima";
 
         let perso4 = new Object();
         perso4.life = 100;
@@ -46,7 +46,7 @@
         perso4.armure = 8;
         perso4.mana = 0;
         perso4.name = "Titania";
-        perso4.chemin = playerOne;
+        perso4.chemin = playerTwo;
         perso4.stop = "ninjagirl"; // class
         perso4.attack = "ninjagirlattack";
         perso4.run = "ninjagirlrun";
@@ -58,6 +58,6 @@
         data.push(perso4); // data[3]
 
 
-        let joueur1 = 0;
-        let joueur2 = 0;
+        let joueur1 = data[2];
+        let joueur2 = data[3];
             
