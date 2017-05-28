@@ -34,9 +34,22 @@ choosePlayer2 = document.getElementById("choosePlayer2");
         player.style.left = tabchoice[nombre].left + "px";
         player.style.top = tabchoice[nombre].top + "px";
     }
+    function namePlayers(id, player){
+        document.querySelector(id).textContent = player.name;
+    }
 
 let i = 0;
 let x = 0;
+
+namePlayers("#nameChoice1", data[0]);
+namePlayers("#nameChoice2", data[1]);
+namePlayers("#nameChoice3", data[2]);
+namePlayers("#nameChoice4", data[3]);
+namePlayers("#nameChoice5", data[4]);
+namePlayers("#nameChoice6", data[5]);
+namePlayers("#nameChoice7", data[6]);
+namePlayers("#nameChoice8", data[7]);
+
 
 document.addEventListener("keydown", function(e){
 
