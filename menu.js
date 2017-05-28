@@ -30,9 +30,6 @@ tabchoice.push(place1, place2, place3, place4, place5, place6, place7, place8);
 choosePlayer1 = document.getElementById("choosePlayer1");
 choosePlayer2 = document.getElementById("choosePlayer2");
 
-        document.querySelector("#namePlayerL").textContent = joueur1.name;// nom player
-        document.querySelector("#namePlayerR").textContent = joueur2.name;// nom player
-
     function mooveSquare(player, nombre){
         player.style.left = tabchoice[nombre].left + "px";
         player.style.top = tabchoice[nombre].top + "px";
@@ -50,7 +47,7 @@ document.addEventListener("keydown", function(e){
                 i++;
                 if(x === 0){
                     mooveSquare(choosePlayer1, i);
-                } else{
+                } else if( x === 1){
                     mooveSquare(choosePlayer2, i);
                 }
             }
@@ -60,7 +57,7 @@ document.addEventListener("keydown", function(e){
                 i--;
                 if(x === 0){
                     mooveSquare(choosePlayer1, i);
-                } else{
+                } else if( x === 1){
                     mooveSquare(choosePlayer2, i);
                 }
             }
@@ -72,7 +69,7 @@ document.addEventListener("keydown", function(e){
             }
             if(x === 0){
                 mooveSquare(choosePlayer1, i);
-            } else{
+            } else if( x === 1){
                 mooveSquare(choosePlayer2, i);
             }
         break;
@@ -83,23 +80,39 @@ document.addEventListener("keydown", function(e){
             }
             if(x === 0){
                 mooveSquare(choosePlayer1, i);
-            } else{
+            } else if( x === 1){
                 mooveSquare(choosePlayer2, i);
             }
         break;
-        case 77 : // m
+        case 13 : // enter
             if(x === 0){
                 joueur1 = data[i];
                 joueur1.chemin = playerOne;
                 console.log(joueur1)
                 i = 0;
                 x++;
-            } else {
+            } else if(x === 1){
                 joueur2 = data[i];
                 joueur2.chemin = playerTwo;
                 console.log(joueur2)
                 i = 0;
                 x++;
+            } else {
+                x = 2;
             }
+        break;
+        case 8 : //delete
+            if(x > 0){
+                x--;
+            } else{
+                x = 0;
+            }
+        break;
+        case 32 : // space
+            if(x === 2){
+                document.querySelector("#play").style.zIndex = "2";
+                document.querySelector("#menu").style.zIndex = "1";
+            }
+        break;
     }
 });

@@ -48,8 +48,7 @@
         function textIn(chemin, commentaire, keys){
             document.querySelector(chemin).textContent = commentaire + keys;
 
-        }
-  
+        }        
 
         playerOne.classList = joueur1.stop; // animation arret
         playerTwo.classList = joueur2.stop + " scaleX"; // animation arret
@@ -74,7 +73,6 @@
 
         document.addEventListener("keydown", function(e){
             let entre = e.keyCode;
-            //console.log("left : " + document.getElementById("playerOne").offsetLeft + "  right : " + document.getElementById("playerOne").offsetTop);
 
             switch(entre){
                 case 39 : // fleche droite
@@ -161,15 +159,5 @@
                         return null;
                 }
 
-            textIn("#caractLifeL", "Life : ", joueur1.life);
-            textIn("#caractLifeR", "Life : ", joueur2.life);
-            textIn("#caractManaL", "Mana : ", joueur1.mana);
-            textIn("#caractManaR", "Mana : ", joueur2.mana);
-            textIn("#caractPowerL", "Power : ", joueur1.power);
-            textIn("#caractPowerR", "Power : ", joueur2.power);
-            textIn("#caractArmureL", "Armor : ", joueur1.armure);
-            textIn("#caractArmureR", "Armor : ", joueur2.armure);
-
             }
         });
-        

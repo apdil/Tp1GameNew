@@ -7,11 +7,10 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="marginAuto width75">
-    <main id="menu" class="widthmax heightmax">
-        <div>boutton back</div>
+<body class="marginAuto width75 positionRel">
+    <main id="menu" class="widthmax heightmax fx fxColumn jsContentSA positionAbs">
         <h2 class="marginone">Choose your perso</h2>
-        <div class="fx fxColumn marginAuto marginTop3 width75"> <!-- champs personnages -->
+        <div class="fx fxColumn marginAuto width75"> <!-- champs personnages -->
             <div id="choosePlayer1"></div>
             <div id="choosePlayer2"></div>
             <div class="fx jsContentSB widthmax">
@@ -27,8 +26,12 @@
                 <div id="choix8"><div class="menuPerso"></div><p>paul</p></div>
             </div>
         </div>
+        <div class="fx jsContentSA">
+            <div class="hooverPerso"></div>
+            <div class="hooverPerso"></div>
+        </div>
     </main>
-    <main id="play" class="widthmax heightmax fx fxColumn jsContentSB">
+    <main id="play" class="widthmax heightmax fx fxColumn jsContentSB positionAbs">
         <div id="divChampsPerso" class="fx jsContentSB"> <!-- champs Present Perosnnage -->
             <div class="champsDiv scaleX fx"> <!-- presente perso Left -->
                 <div id="imgPersoL" class="imgPerso"></div>

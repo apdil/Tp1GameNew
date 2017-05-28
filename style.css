@@ -8,10 +8,10 @@ main{
     background-size: 100% 100%;
 }
 #menu{
-    
-    display: none;
+    z-index: 2;
 }
 #play{
+    z-index: 1;
 }
 .fx{
     display: flex;
@@ -57,6 +57,12 @@ main{
 }*/
 .width75{
     width: 75%;
+}
+.positionRel{
+    position: relative;
+}
+.positionAbs{
+    position: absolute;
 }
 .hpdiv{
     height:1.7em;
@@ -200,6 +206,28 @@ main{
     width:5em;
     background-image: url(img/maxima.png);
 }
+.thai{
+    animation: thaiStop 0.9s;
+    animation-timing-function: step-end;
+    animation-iteration-count: infinite;
+    height:8em;
+    width:6em;
+    background-image: url(img/thai.png);
+}
+.thaiattack{
+    animation: thaiAttack 0.8s;
+    animation-timing-function: step-end;
+    height:8em;
+    width:6em;
+    background-image: url(img/thai.png);
+}
+.thairun{
+    animation: thaiRun 0.8s;
+    animation-timing-function: step-end;
+    height:8em;
+    width:6em;
+    background-image: url(img/thai.png);
+}
 #divChampsPerso{
     margin-top: 1em;
     margin-bottom: -17em;
@@ -235,6 +263,11 @@ main{
     background-image: url(img/maxima.png);
     background-size: 1747% 9000%;
     background-position: 24.3% 96.9%;
+}
+.imgThai{
+    background-image: url(img/thai.png);
+    background-size: 1500% 6200%;
+    background-position: 78.5% 95.79%;
 }
 .imgPerso{
     height: 5em;
@@ -274,12 +307,22 @@ main{
 }
 #choix3 div{
     background-image: url(img/maxima.png);
-    background-size: 1500% 10000%;
-    background-position: 18% 1.15%;
+    background-size: 950% 7600%;
+    background-position: 67% 98.6%;
 }
 #choix4 div{
     background-image: url(img/ninjag/throw3.png);
     background-size: 100% 150%;    
+}
+#choix5 div{
+    background-image: url(img/thai.png);
+    background-size: 1500% 6200%;
+    background-position: 37.1% 95.79%;
+}
+.hooverPerso{
+    background-color: red;
+    width:8em;
+    height: 11em;
 }
 @keyframes ninjaGirlStop{
     0%{
@@ -713,5 +756,142 @@ main{
     100%{
         background-size: 1500% 10000%;
         background-position: 56% 1.15%;
+    }
+}
+@keyframes thaiStop{
+    0%{
+        background-size: 1500% 6600%;
+        background-position: 0.5% 3.15%;
+    }
+    9%{
+        background-size: 1500% 6600%;
+        background-position: 7.5% 3.15%;
+    }
+    18%{
+        background-size: 1500% 6600%;
+        background-position: 14.5% 3.15%;
+    }
+    27%{
+        background-size: 1500% 6600%;
+        background-position: 21.8% 3.15%;
+    }
+    36%{
+        background-size: 1500% 6600%;
+        background-position: 29.3% 3.15%;
+    }
+    45%{
+        background-size: 1500% 6600%;
+        background-position: 37.1% 3.15%;
+    }
+    54%{
+        background-size: 1500% 6600%;
+        background-position: 45% 3.15%;
+    }
+    63%{
+        background-size: 1500% 6600%;
+        background-position: 52.8% 3.15%;
+    }
+    72%{
+        background-size: 1500% 6600%;
+        background-position: 60.5% 3.15%;
+    }
+    81%{
+        background-size: 1500% 6600%;
+        background-position: 68.2% 3.15%;
+    }
+    90%{
+        background-size: 1500% 6600%;
+        background-position: 75.76% 3.15%;
+    }
+    100%{
+        background-size: 1500% 6600%;
+        background-position: 83.1% 3.15%;
+    }
+}
+@keyframes thaiAttack{
+    0%{
+        background-size: 1300% 6400%;
+        background-position: 0.5% 21.9%;
+    }
+    10%{
+        background-position: 9.5% 21.9%;
+    }
+    20%{
+        background-size: 1100% 6400%;
+        background-position: 18.5% 21.9%;
+        width: 7em;
+    }
+    30%{
+        background-size: 1000% 6400%;
+        background-position: 29% 21.9%;
+        width: 8em;
+    }
+    40%{
+        background-size: 1200% 6400%;
+        background-position: 52% 21.9%;
+        width: 7em;
+    }
+    50%{
+        background-size: 1200% 6400%;
+        background-position: 62% 21.9%;
+    }
+    60%{
+        background-size: 1600% 6400%;
+        background-position: 70.5% 21.9%;
+        width: 5em;
+    }
+    70%{
+        background-size: 1600% 6400%;
+        background-position: 77.5% 21.9%;
+        width: 5em;
+    }
+    80%{
+        background-size: 1600% 6400%;
+        background-position: 83.3% 21.9%;
+        width: 5em;
+    }
+    90%{
+        background-size: 2200% 6400%;
+        background-position: 95.3% 21.9%;
+        width: 4em;
+    }
+    100%{
+         background-size: 2200% 6400%;
+        background-position: 95.3% 21.9%;
+        width: 4em;
+    }
+}
+@keyframes thaiRun{
+    0%{
+        background-size: 1500% 6600%;
+        background-position: 8.5% 10%;
+    }
+    16.5%{
+        background-size: 1100% 6600%;
+        background-position: 16.5% 10%;
+        width: 7em;
+    }
+    33%{
+        background-size: 1100% 6600%;
+        background-position: 27.5% 10%;
+        width: 7em;
+    }
+    49.5%{
+        background-size: 1500% 6600%;
+        background-position: 37.9% 10%;
+        width: 6em;
+    }
+    66%{
+        background-size: 1100% 6600%;
+        background-position: 57.3% 10%;
+        width: 7em;
+    }
+    82.5%{
+        
+    }
+    100%{
+        background-size: 1100% 6600%;
+        background-position: 57.3% 10%;
+        width: 7em;
     }
 }
