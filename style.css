@@ -4,14 +4,15 @@ body{
     background-color: black;
 }
 main{
-    background-image: url(img/fond.gif);
     background-size: 100% 100%;
 }
 #menu{
     z-index: 2;
+    background-image: url(img/fond2.png);
 }
 #play{
     z-index: 1;
+    background-image: url(img/fond.gif);
 }
 .fx{
     display: flex;
@@ -57,6 +58,9 @@ main{
 }*/
 .width75{
     width: 75%;
+}
+.width50{
+    width: 50%;
 }
 .positionRel{
     position: relative;
@@ -187,6 +191,16 @@ main{
     width:5em;
     background-image: url(img/boue.gif);
 }
+.degueuReady{
+    animation: degueuReady 0.8s;
+    animation-timing-function: step-end;
+    background-image: url(img/boue.gif);
+}
+.degeueValidImg{
+    background-position: 97% 17%;
+    background-image: url(img/boue.gif);
+    background-size: 1069% 687%;
+}
 .maxima{
     animation: maximaStop 0.9s;
     animation-timing-function: step-end;
@@ -209,6 +223,16 @@ main{
     width:5em;
     background-image: url(img/maxima.png);
 }
+.maximaReady{
+    animation: maximaReady 0.8s;
+    animation-timing-function: step-end;
+    background-image: url(img/maxima.png);
+}
+.maximaValidImg{
+    background-position: 57% 89.62%;
+    background-image: url(img/maxima.png);
+    background-size: 1500% 10000%;
+}
 .thai{
     animation: thaiStop 0.9s;
     animation-timing-function: step-end;
@@ -230,6 +254,16 @@ main{
     height:8em;
     width:6em;
     background-image: url(img/thai.png);
+}
+.thaiReady{
+    animation: thaiReady 0.8s;
+    animation-timing-function: step-end;
+    background-image: url(img/thai.png);
+}
+.thaiValidImg{
+    background-image: url(img/thai.png);
+    background-size: 1500% 5644%;
+    background-position: 38.7% 1.2%;
 }
 #divChampsPerso{
     margin-top: 1em;
@@ -285,7 +319,7 @@ main{
     height:6em;
     width:6em;
     border : 1px solid black;
-    background-color: wheat;
+    background-color: white;
 }
 #choosePlayer1{
     height:6em;
@@ -327,8 +361,12 @@ main{
     background-position: 37.1% 95.79%;
 }
 .hooverPerso{
-    background-color: red;
     width:8em;
+    height: 11em;
+    background-repeat: no-repeat;
+}
+.hooverCaract{
+    width:12em;
     height: 11em;
 }
 @keyframes ninjaGirlStop{
@@ -653,6 +691,37 @@ main{
         background-position: 92.6% 52%;
     }
 }
+@keyframes degueuReady{
+    0%{
+        background-size: 1069% 687%;
+        background-position: 22% 17%;
+    }
+    12.5%{
+        background-position: 32% 17%;
+    }
+    25%{
+        background-position: 42% 17%;
+    }
+    37.5%{
+        background-position: 53% 17%;
+    }
+    50%{
+        background-position: 64% 17%;
+    }
+    62.5%{
+        background-position: 75% 17%;
+    }
+    75%{
+        background-position: 86% 17%;
+    }
+    88%{
+        background-position: 97% 17%;
+    }
+    100%{
+        background-position: 97% 17%;
+    }
+
+}
 @keyframes maximaStop{
     0%{
         background-size: 1500% 10000%;
@@ -763,6 +832,36 @@ main{
     100%{
         background-size: 1500% 10000%;
         background-position: 56% 1.15%;
+    }
+}
+@keyframes maximaReady{
+     0%{
+        background-size: 1500% 10000%;
+        background-position: 3% 89.62%;
+    }
+    12.5%{
+        background-position: 12.5% 89.62%;
+    }
+    25%{
+        background-position: 20.5% 89.62%;
+    }
+    37.5%{
+        background-position: 27.5% 89.62%;
+    }
+    50%{
+        background-position: 34.5% 89.62%;
+    }
+    62.5%{
+        background-position: 41% 89.62%;
+    }
+    75%{
+        background-position: 48% 89.62%;
+    }
+    87.5%{
+        background-position: 57% 89.62%;
+    }
+    100%{
+        background-position: 57% 89.62%;
     }
 }
 @keyframes thaiStop{
@@ -900,5 +999,29 @@ main{
         background-size: 1100% 6600%;
         background-position: 57.3% 10%;
         width: 7em;
+    }
+}
+@keyframes thaiReady{
+    0%{
+        background-size: 1500% 5644%;
+        background-position: 0% 1.2%;
+    }
+    16.5%{
+        background-position: 7% 1.2%;
+    }
+    33%{
+        background-position: 18.7% 1.2%;
+    }
+    50%{
+        background-position: 24.7% 1.2%;
+    }
+    66%{
+        background-position: 31.7% 1.2%;
+    }
+    82%{
+        background-position: 38.7% 1.2%;
+    }
+    100%{
+        background-position: 38.7% 1.2%;
     }
 }

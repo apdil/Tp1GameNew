@@ -37,6 +37,23 @@ choosePlayer2 = document.getElementById("choosePlayer2");
     function namePlayers(id, player){
         document.querySelector(id).textContent = player.name;
     }
+    function textIn(chemin, commentaire, keys){
+            document.querySelector(chemin).textContent = commentaire + keys;
+
+        }
+    function textInMenu(){
+        if(x === 0){
+            textIn("#caractMenu1", "Life : ", data[i].life);
+            textIn("#caractMenu2", "Mana : ", data[i].mana);
+            textIn("#caractMenu3", "Power : ", data[i].power);
+            textIn("#caractMenu4", "Armor : ", data[i].armure);
+        } else{
+            textIn("#caractMenu5", "Life : ", data[i].life);
+            textIn("#caractMenu6", "Mana : ", data[i].mana);
+            textIn("#caractMenu7", "Power : ", data[i].power);
+            textIn("#caractMenu8", "Armor : ", data[i].armure);
+        }
+    }
 
 let i = 0;
 let x = 0;
@@ -50,6 +67,14 @@ namePlayers("#nameChoice6", data[5]);
 namePlayers("#nameChoice7", data[6]);
 namePlayers("#nameChoice8", data[7]);
 
+document.querySelector("#hooverPerso1").classList += " " + data[i].stop;
+document.querySelector("#hooverPerso2").classList += " scaleX " + data[i].stop;
+
+textInMenu();
+textIn("#caractMenu5", "Life : ", data[i].life);
+textIn("#caractMenu6", "Mana : ", data[i].mana);
+textIn("#caractMenu7", "Power : ", data[i].power);
+textIn("#caractMenu8", "Armor : ", data[i].armure);
 
 document.addEventListener("keydown", function(e){
 
@@ -60,9 +85,12 @@ document.addEventListener("keydown", function(e){
                 i++;
                 if(x === 0){
                     mooveSquare(choosePlayer1, i);
+                    document.querySelector("#hooverPerso1").classList = "hooverPerso " + data[i].stop;
                 } else if( x === 1){
                     mooveSquare(choosePlayer2, i);
+                    document.querySelector("#hooverPerso2").classList = "hooverPerso scaleX " + data[i].stop;
                 }
+                textInMenu();
             }
         break;
         case 37 : // fleche gauche
@@ -70,9 +98,12 @@ document.addEventListener("keydown", function(e){
                 i--;
                 if(x === 0){
                     mooveSquare(choosePlayer1, i);
+                    document.querySelector("#hooverPerso1").classList = "hooverPerso " + data[i].stop;
                 } else if( x === 1){
                     mooveSquare(choosePlayer2, i);
+                    document.querySelector("#hooverPerso2").classList = "hooverPerso scaleX " + data[i].stop;
                 }
+                textInMenu();
             }
         break;
         case 40 : // bas
@@ -82,9 +113,12 @@ document.addEventListener("keydown", function(e){
             }
             if(x === 0){
                 mooveSquare(choosePlayer1, i);
+                document.querySelector("#hooverPerso1").classList = "hooverPerso " + data[i].stop;
             } else if( x === 1){
                 mooveSquare(choosePlayer2, i);
+                document.querySelector("#hooverPerso2").classList = "hooverPerso scaleX " + data[i].stop;
             }
+            textInMenu();
         break;
         case 38 : // haut
             i = i - 4;
@@ -93,21 +127,26 @@ document.addEventListener("keydown", function(e){
             }
             if(x === 0){
                 mooveSquare(choosePlayer1, i);
+                document.querySelector("#hooverPerso1").classList = "hooverPerso " + data[i].stop;
             } else if( x === 1){
                 mooveSquare(choosePlayer2, i);
+                document.querySelector("#hooverPerso2").classList = "hooverPerso scaleX " + data[i].stop;
             }
+            textInMenu();
         break;
         case 13 : // enter
             if(x === 0){
                 joueur1 = data[i];
                 joueur1.chemin = playerOne;
-                console.log(joueur1)
+                document.querySelector("#hooverPerso1").classList = "hooverPerso " + joueur1.ready;
+                animend("#hooverPerso1", document.querySelector("#hooverPerso1"), "hooverPerso " + joueur1.validate);
                 i = 0;
                 x++;
             } else if(x === 1){
                 joueur2 = data[i];
                 joueur2.chemin = playerTwo;
-                console.log(joueur2)
+                document.querySelector("#hooverPerso2").classList = "hooverPerso scaleX " + joueur2.ready;
+                animend("#hooverPerso2", document.querySelector("#hooverPerso2"), "hooverPerso scaleX " + joueur2.validate);
                 i = 0;
                 x++;
             } else {

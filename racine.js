@@ -15,13 +15,15 @@
         perso1.attack = "degueattack";
         perso1.run = "deguerun";
         perso1.img = "imgDegue";
+        perso1.ready = "degueuReady";
+        perso1.validate = "degeueValidImg";
 
         let perso2 = new Object();
         perso2.life = 100;
         perso2.power = 17;
         perso2.armure = 3;
         perso2.mana = 0;
-        perso2.name = "Titan";
+        perso2.name = "Ninja";
         perso2.chemin = "";
         perso2.stop = "ninjaboy"; // class
         perso2.attack = "ninjaboyattack";
@@ -39,6 +41,8 @@
         perso3.attack = "maximattack";
         perso3.run = "maximarun";
         perso3.img = "imgMaxima";
+        perso3.ready = "maximaReady";
+        perso3.validate = "maximaValidImg";
 
         let perso4 = new Object();
         perso4.life = 100;
@@ -63,6 +67,8 @@
         perso5.attack = "thaiattack";
         perso5.run = "thairun";
         perso5.img = "imgThai";
+        perso5.ready = "thaiReady";
+        perso5.validate = "thaiValidImg";
 
         let perso6 = new Object();
         perso6.life = 100;
